@@ -103,7 +103,7 @@ def apply_multithresholding(img, thresholds):
     for i in range(1, len(ext_thresholds)):
         thres_image[img >= ext_thresholds[i]] = i
     wp_val = 255 // len(thresholds)
-    return thres_image * wp_val   
+    return thres_image * wp_val
 
 def feat(image):
     dir_path = "C:/temp"
@@ -174,4 +174,3 @@ def niblack_o():
 
 if __name__ == '__main__':
     app.run()
-

@@ -54,14 +54,18 @@ class RecentsPageState extends State<RecentsPage> {
                   onTap: () {
                     if (!_isNavigating) {
                       _isNavigating = true;
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              ImageDisplayPage(imageFile: File(file.path)),
-                        ),
-                      );
-                      _isNavigating = false;
+
+                      Future.delayed(Duration.zero, () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                ImageDisplayPage(imageFile: File(file.path)),
+                          ),
+                        ).then((value) {
+                          _isNavigating = false;
+                        });
+                      });
                     }
                   },
                   child: Image.file(

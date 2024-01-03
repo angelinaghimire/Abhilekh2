@@ -190,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                   width: 130,
                   height: 50,
                   margin:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
